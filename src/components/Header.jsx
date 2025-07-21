@@ -5,12 +5,12 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "/" },
-    { name: "Products", href: "/products" },
-    { name: "Artisans", href: "/artisans" },
-    { name: "Workshops", href: "/workshops" },
-    { name: "Blog", href: "/blog" },
-    { name: "Contact", href: "/contact" },
+    { name: "Home", to: "/" },
+    { name: "Products", to: "/products" },
+    { name: "Artisans", to: "/artisans" },
+    { name: "Workshops", to: "/workshops" },
+    { name: "Blog", to: "/blog" },
+    { name: "Contact", to: "/contact" },
   ];
 
   return (
@@ -39,14 +39,14 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
+              <NavLink
                 key={item.name}
-                href={item.href}
+                to={item.to}
                 className="text-vietnamese-brown-dark hover:text-vietnamese-red font-medium transition-colors duration-200 relative group"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-vietnamese-red transition-all duration-200 group-hover:w-full"></span>
-              </a>
+              </NavLink>
             ))}
           </nav>
 
@@ -91,14 +91,14 @@ const Header = () => {
           <div className="md:hidden py-4 border-t border-vietnamese-gray-light bg-white/98 backdrop-blur-sm">
             <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <a
+                <NavLink
                   key={item.name}
-                  href={item.href}
+                  to={item.to}
                   className="text-vietnamese-brown-dark hover:text-vietnamese-red font-medium transition-colors duration-200 py-2 px-4 rounded-lg hover:bg-vietnamese-cream"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
-                </a>
+                </NavLink>
               ))}
               <div className="flex flex-col space-y-3 pt-4 border-t border-vietnamese-gray-light">
                 <button className="btn-secondary w-full">Login</button>
