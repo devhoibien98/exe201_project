@@ -5,12 +5,12 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "/exe201_project" },
-    { name: "Products", href: "/exe201_project/products" },
-    { name: "Artisans", href: "/exe201_project/artisans" },
-    { name: "Workshops", href: "/exe201_project/workshops" },
-    { name: "Blog", href: "/exe201_project/blog" },
-    { name: "Contact", href: "/exe201_project/contact" },
+    { name: "Home", href: "/" },
+    { name: "Products", href: "/products" },
+    { name: "Artisans", href: "/artisans" },
+    { name: "Workshops", href: "/workshops" },
+    { name: "Blog", href: "/blog" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
